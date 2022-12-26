@@ -33,9 +33,9 @@ if termux_check == 'F_DROID':
         os.system('echo nameserver 8.8.8.8 > /data/data/com.termux/files/usr/etc/resolv.conf')
         if os.path.isfile(resname):
             os.remove(resname)
-        print("Done")
+        print('Done')
     else:
-        print("Update Python version to 3.11")
+        print('Update Python version to 3.11, and re run the script.')
 """
 }
 
@@ -68,4 +68,15 @@ fi
 }
 
 
-check_termux
+read -p "
+Enter 1 to setup VenomX.
+Enter 2 to fix the resolver issue.
+>>" num
+
+if [[ $num == 1 ]]; then
+    check_termux
+elif [[ $num == 2 ]]; then
+    fix_resolve
+else
+    echo -e 'Wrong input\nrun script again.'
+fi
