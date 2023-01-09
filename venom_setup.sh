@@ -18,7 +18,7 @@ echo "Done"
 fix_resolve() {
 clear
 echo -e "Fixing Python issue."
-wget -q https://raw.githubusercontent.com/ux-termux/venomx/main/resolver.py
+wget -q https://raw.githubusercontent.com/applled/makix/main/resolver.py
 python -c """
 import os
 from sys import version_info as ver
@@ -43,7 +43,7 @@ if termux_check == 'F_DROID':
 bot() {
 clear
 echo "Clonning Bot Repository."
-git clone -q https://github.com/ashwinstr/VenomX
+git clone -q https://github.com/applled/SomeEdits
 cd VenomX
 echo "Installing Pypi Requirments"
 pip install -r requirements.txt
